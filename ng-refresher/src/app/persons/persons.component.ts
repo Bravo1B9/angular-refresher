@@ -21,6 +21,7 @@ export class PersonsComponent implements OnInit, OnDestroy {
     this.personListSubs = this.prsService.personsChanged.subscribe(persons => {
       this.personList = persons;
     });
+    this.prsService.fetchPersons();
   }
 
   onRemovePerson(name: string) {
